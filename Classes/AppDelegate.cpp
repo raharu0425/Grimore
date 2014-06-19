@@ -1,5 +1,6 @@
 #include "AppDelegate.h"
 #include "HelloWorldScene.h"
+#include "scene/BattleScene.h"
 
 USING_NS_CC;
 
@@ -21,7 +22,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
     }
     
     //解像度
-    glview->setDesignResolutionSize(320, 480, ResolutionPolicy::NO_BORDER);
+    glview->setDesignResolutionSize(320, 480, ResolutionPolicy::FIXED_WIDTH);
 
     // turn on display FPS
     director->setDisplayStats(true);
@@ -30,7 +31,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
     director->setAnimationInterval(1.0 / 60);
 
     // create a scene. it's an autorelease object
-    auto scene = HelloWorld::createScene();
+    auto scene = BattleScene::createScene();
 
     // run
     director->runWithScene(scene);

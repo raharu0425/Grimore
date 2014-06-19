@@ -1,4 +1,5 @@
 #include "HelloWorldScene.h"
+#include "scene/BattleScene.h"
 
 USING_NS_CC;
 
@@ -27,6 +28,9 @@ bool HelloWorld::init()
         return false;
     }
     
+    scheduleOnce(schedule_selector(HelloWorld::complted), 4.0f);
+    
+    /*
     Size visibleSize = Director::getInstance()->getVisibleSize();
     Point origin = Director::getInstance()->getVisibleOrigin();
 
@@ -71,13 +75,22 @@ bool HelloWorld::init()
 
     // add the sprite as a child to this layer
     this->addChild(sprite, 0);
+     */
     
     return true;
 }
 
 
+//シーンの切り替え
+void HelloWorld::complted(float delta)
+{
+    Director::getInstance()->replaceScene(TransitionFade::create(0.5f, BattleScene::createScene()));
+}
+
 void HelloWorld::menuCloseCallback(Ref* pSender)
 {
+    
+/*
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_WP8) || (CC_TARGET_PLATFORM == CC_PLATFORM_WINRT)
 	MessageBox("You pressed the close button. Windows Store Apps do not implement a close button.","Alert");
     return;
@@ -88,4 +101,5 @@ void HelloWorld::menuCloseCallback(Ref* pSender)
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
     exit(0);
 #endif
+ */
 }
