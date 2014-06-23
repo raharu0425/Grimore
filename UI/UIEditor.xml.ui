@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UIProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ProjectDir>/Users/raharu/Desktop/Grimore/UI</ProjectDir>
+  <Version>1.0.0.0</Version>
+  <Resources>/Users/raharu/Desktop/Grimore/UI/Resources</Resources>
+  <Name>UIEditor</Name>
+  <JsonFileName>UIEditor.json</JsonFileName>
+  <JsonFolder>/Users/raharu/Desktop/Grimore/UI/Json</JsonFolder>
+  <JsonList>
+    <string>BattleSceneLayout.json</string>
+  </JsonList>
+  <filePath>/Users/raharu/Desktop/Grimore/UI/UIEditor.xml.ui</filePath>
+  <ProjectType>UIProject</ProjectType>
+  <ResRelativePath />
+  <imageFileList />
+  <imagePngList />
+  <JsonSuffix>.json</JsonSuffix>
+  <CurrentUIJson>BattleSceneLayout.json</CurrentUIJson>
+  <CanvasSize>
+    <Width>320</Width>
+    <Height>480</Height>
+  </CanvasSize>
+</UIProject>

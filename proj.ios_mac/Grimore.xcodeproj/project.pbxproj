@@ -35,8 +35,12 @@
 		340D9A1A194F048E00B1F0A1 /* PlayerCard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 340D9A17194F048E00B1F0A1 /* PlayerCard.cpp */; };
 		340D9A22194FE5F200B1F0A1 /* MainMenuScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 340D9A20194FE5F200B1F0A1 /* MainMenuScene.cpp */; };
 		340D9A23194FE5F200B1F0A1 /* MainMenuScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 340D9A20194FE5F200B1F0A1 /* MainMenuScene.cpp */; };
-		340D9A491950944E00B1F0A1 /* BattleUILayout in Resources */ = {isa = PBXBuildFile; fileRef = 340D9A481950944E00B1F0A1 /* BattleUILayout */; };
-		340D9A4A1950944E00B1F0A1 /* BattleUILayout in Resources */ = {isa = PBXBuildFile; fileRef = 340D9A481950944E00B1F0A1 /* BattleUILayout */; };
+		345036C21953179200DE7A1C /* UIEditor_BattleScene in Resources */ = {isa = PBXBuildFile; fileRef = 345036C11953179200DE7A1C /* UIEditor_BattleScene */; };
+		345036C31953179200DE7A1C /* UIEditor_BattleScene in Resources */ = {isa = PBXBuildFile; fileRef = 345036C11953179200DE7A1C /* UIEditor_BattleScene */; };
+		345036C7195318B700DE7A1C /* BattleSceneLayout in Resources */ = {isa = PBXBuildFile; fileRef = 345036C6195318B700DE7A1C /* BattleSceneLayout */; };
+		345036C8195318B700DE7A1C /* BattleSceneLayout in Resources */ = {isa = PBXBuildFile; fileRef = 345036C6195318B700DE7A1C /* BattleSceneLayout */; };
+		345036D51957FFEC00DE7A1C /* disableTouchLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 345036D31957FFEC00DE7A1C /* disableTouchLayer.cpp */; };
+		345036D61957FFEC00DE7A1C /* disableTouchLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 345036D31957FFEC00DE7A1C /* disableTouchLayer.cpp */; };
 		503AE0F817EB97AB00D1A890 /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 503AE0F617EB97AB00D1A890 /* Icon.icns */; };
 		503AE10017EB989F00D1A890 /* AppController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 503AE0FB17EB989F00D1A890 /* AppController.mm */; };
 		503AE10117EB989F00D1A890 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 503AE0FC17EB989F00D1A890 /* main.m */; };
@@ -250,7 +254,10 @@
 		340D9A18194F048E00B1F0A1 /* PlayerCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerCard.h; sourceTree = "<group>"; };
 		340D9A20194FE5F200B1F0A1 /* MainMenuScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MainMenuScene.cpp; sourceTree = "<group>"; };
 		340D9A21194FE5F200B1F0A1 /* MainMenuScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuScene.h; sourceTree = "<group>"; };
-		340D9A481950944E00B1F0A1 /* BattleUILayout */ = {isa = PBXFileReference; lastKnownFileType = folder; path = BattleUILayout; sourceTree = "<group>"; };
+		345036C11953179200DE7A1C /* UIEditor_BattleScene */ = {isa = PBXFileReference; lastKnownFileType = folder; path = UIEditor_BattleScene; sourceTree = "<group>"; };
+		345036C6195318B700DE7A1C /* BattleSceneLayout */ = {isa = PBXFileReference; lastKnownFileType = folder; path = BattleSceneLayout; sourceTree = "<group>"; };
+		345036D31957FFEC00DE7A1C /* disableTouchLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = disableTouchLayer.cpp; path = ../Classes/disableTouchLayer.cpp; sourceTree = "<group>"; };
+		345036D41957FFEC00DE7A1C /* disableTouchLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = disableTouchLayer.h; path = ../Classes/disableTouchLayer.h; sourceTree = "<group>"; };
 		503AE0F617EB97AB00D1A890 /* Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Icon.icns; sourceTree = "<group>"; };
 		503AE0F717EB97AB00D1A890 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		503AE0FA17EB989F00D1A890 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppController.h; path = ios/AppController.h; sourceTree = SOURCE_ROOT; };
@@ -366,6 +373,8 @@
 				1AFAF8B516D35DE700DB1158 /* HelloWorldScene.cpp */,
 				1AFAF8B616D35DE700DB1158 /* HelloWorldScene.h */,
 				340D9A08194EF95D00B1F0A1 /* Config.h */,
+				345036D31957FFEC00DE7A1C /* disableTouchLayer.cpp */,
+				345036D41957FFEC00DE7A1C /* disableTouchLayer.h */,
 			);
 			name = Classes;
 			path = ../classes;
@@ -505,7 +514,8 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				340D9A481950944E00B1F0A1 /* BattleUILayout */,
+				345036C6195318B700DE7A1C /* BattleSceneLayout */,
+				345036C11953179200DE7A1C /* UIEditor_BattleScene */,
 				340D9A02194EF48100B1F0A1 /* card */,
 				1AFAF8B916D35E4900DB1158 /* CloseNormal.png */,
 				1AFAF8BA16D35E4900DB1158 /* CloseSelected.png */,
@@ -680,11 +690,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				5087E78117EB970100C73F5D /* Icon-120.png in Resources */,
+				345036C7195318B700DE7A1C /* BattleSceneLayout in Resources */,
 				5087E78617EB970100C73F5D /* Icon-76.png in Resources */,
 				5087E77F17EB970100C73F5D /* Default@2x.png in Resources */,
 				50EF629917ECD46A001EB2F8 /* Icon-100.png in Resources */,
 				340D9A05194EF48100B1F0A1 /* card in Resources */,
-				340D9A491950944E00B1F0A1 /* BattleUILayout in Resources */,
+				345036C21953179200DE7A1C /* UIEditor_BattleScene in Resources */,
 				1AFAF8BC16D35E4900DB1158 /* CloseNormal.png in Resources */,
 				5087E78317EB970100C73F5D /* Icon-152.png in Resources */,
 				5087E77D17EB970100C73F5D /* Default-568h@2x.png in Resources */,
@@ -708,8 +719,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5087E75317EB910900C73F5D /* CloseNormal.png in Resources */,
+				345036C8195318B700DE7A1C /* BattleSceneLayout in Resources */,
+				345036C31953179200DE7A1C /* UIEditor_BattleScene in Resources */,
 				503AE0F817EB97AB00D1A890 /* Icon.icns in Resources */,
-				340D9A4A1950944E00B1F0A1 /* BattleUILayout in Resources */,
 				5087E75417EB910900C73F5D /* CloseSelected.png in Resources */,
 				5087E75517EB910900C73F5D /* HelloWorld.png in Resources */,
 				340D9A06194EF48100B1F0A1 /* card in Resources */,
@@ -729,6 +741,7 @@
 				340D99FF194EF47100B1F0A1 /* BattleScene.cpp in Sources */,
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
 				340D9A15194F045300B1F0A1 /* PlayerDeckManager.cpp in Sources */,
+				345036D51957FFEC00DE7A1C /* disableTouchLayer.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				340D9A19194F048E00B1F0A1 /* PlayerCard.cpp in Sources */,
 				1AFAF8B816D35DE700DB1158 /* HelloWorldScene.cpp in Sources */,
@@ -741,6 +754,7 @@
 			files = (
 				5087E75717EB910900C73F5D /* AppDelegate.cpp in Sources */,
 				340D9A23194FE5F200B1F0A1 /* MainMenuScene.cpp in Sources */,
+				345036D61957FFEC00DE7A1C /* disableTouchLayer.cpp in Sources */,
 				5087E75817EB910900C73F5D /* HelloWorldScene.cpp in Sources */,
 				340D9A16194F045300B1F0A1 /* PlayerDeckManager.cpp in Sources */,
 				340D9A00194EF47100B1F0A1 /* BattleScene.cpp in Sources */,

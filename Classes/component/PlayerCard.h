@@ -23,6 +23,7 @@ public :
     
     CC_SYNTHESIZE(int, _index, Index);
     CC_SYNTHESIZE(bool, _is_Selected, Selected);
+    CC_SYNTHESIZE(bool, _is_lock, Lock);
     
     //タッチイベント
     virtual bool onTouchBegan(cocos2d::Touch* touch, cocos2d::Event* event);

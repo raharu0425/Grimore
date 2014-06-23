@@ -27,6 +27,7 @@ public:
     CC_SYNTHESIZE(cocos2d::__Array*, _hands_cards, HandsCards);
     CC_SYNTHESIZE(cocos2d::__Array*, _used_cards, Used_Cards);
     
+    
     //デッキにセットする
     void setDeckByCard(int identifer, int count);
     //デッキのリロードを行う(足りないカードを追加する)

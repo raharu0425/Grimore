@@ -14,6 +14,7 @@ PlayerCard::PlayerCard()
 {
     this->setIndex(0);
     this->setSelected(false);
+    this->setLock(false);
 }
 
 //OverRide
@@ -39,6 +40,8 @@ PlayerCard* PlayerCard::create(const std::string& filename)
 
 bool PlayerCard::onTouchBegan(cocos2d::Touch* touch, cocos2d::Event* unused_event)
 {
+    if(getLock()) return false;
+    
     auto box = this->getBoundingBox();
     auto point = this->getParent()->convertTouchToNodeSpace(touch);
     
@@ -59,28 +62,37 @@ void PlayerCard::onTouchMoved(Touch *touch, Event *unused_event)
 
 void PlayerCard::onTouchEnded(Touch *touch, Event *unused_event)
 {
+    if(getLock()) return;
+    setLock(true);
+    
     CCLOG("%s:idx:%d : %s(%d)", "card", this->getIndex(), "PlayerCard::onTouchEnded", __LINE__);
     
     auto box = this->getBoundingBox();
     auto point = this->getParent()->convertTouchToNodeSpace(touch);
     
+    
+    auto moveScale  = ScaleTo::create(0.1f, 1.0f);
+    auto unLock = CallFunc::create([this](){
+        this->setLock(false);
+    });
+    
     if(box.containsPoint(point)){
         if(!this->getSelected()){
-            auto moveScale  = ScaleTo::create(0.1f, 1.0f);
             auto movePosition = MoveTo::create(0.1f, Point(getPositionX(), getPositionY() + 20));
-            auto seq = Sequence::create(moveScale, movePosition, NULL);
+            auto seq = Sequence::create(moveScale, movePosition, unLock, NULL);
             this->runAction(seq);
             this->setSelected(true);
+            return;
         }else{
-            auto moveScale  = ScaleTo::create(0.1f, 1.0f);
             auto movePosition = MoveTo::create(0.1f, Point(getPositionX(), getPositionY() - 20));
-            auto seq = Sequence::create(moveScale, movePosition, NULL);
+            auto seq = Sequence::create(moveScale, movePosition, unLock, NULL);
             this->runAction(seq);
             this->setSelected(false);
+            return;
         }
     }else{
-        auto moveScale  = ScaleTo::create(0.1f, 1.0f);
-        this->runAction(moveScale);
+        auto seq = Sequence::create(moveScale, unLock, NULL);
+        this->runAction(seq);
+        return;
     }
-    
 }
