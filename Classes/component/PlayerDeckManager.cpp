@@ -19,7 +19,6 @@ PlayerDeckManager::~PlayerDeckManager()
     CC_SAFE_RELEASE_NULL(_player_deck);
     CC_SAFE_RELEASE_NULL(_used_cards);
     
-    CCLOG("Delete PlayerDeckManager");
 }
 
 //getInstance
@@ -72,6 +71,7 @@ void PlayerDeckManager::setDeckByCard(int identifer, int count_max)
     for( auto count = 1; count <= count_max; count++){
         auto cards_name = StringUtils::format("card/%d.png", identifer);
         auto card = PlayerCard::create(cards_name);
+        card->setIdentifer(identifer);
         deck->addObject(card);
     }
 }

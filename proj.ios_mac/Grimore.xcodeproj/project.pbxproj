@@ -41,6 +41,38 @@
 		345036C8195318B700DE7A1C /* BattleSceneLayout in Resources */ = {isa = PBXBuildFile; fileRef = 345036C6195318B700DE7A1C /* BattleSceneLayout */; };
 		345036D51957FFEC00DE7A1C /* disableTouchLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 345036D31957FFEC00DE7A1C /* disableTouchLayer.cpp */; };
 		345036D61957FFEC00DE7A1C /* disableTouchLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 345036D31957FFEC00DE7A1C /* disableTouchLayer.cpp */; };
+		345036DC19580FC400DE7A1C /* BattleSceneCondition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 345036DA19580FC400DE7A1C /* BattleSceneCondition.cpp */; };
+		345036DD19580FC400DE7A1C /* BattleSceneCondition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 345036DA19580FC400DE7A1C /* BattleSceneCondition.cpp */; };
+		345036E0195873E000DE7A1C /* MagicPlist in Resources */ = {isa = PBXBuildFile; fileRef = 345036DF195873E000DE7A1C /* MagicPlist */; };
+		345036E1195873E000DE7A1C /* MagicPlist in Resources */ = {isa = PBXBuildFile; fileRef = 345036DF195873E000DE7A1C /* MagicPlist */; };
+		345036EC195BBBA400DE7A1C /* TitleScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 345036EA195BBBA400DE7A1C /* TitleScene.cpp */; };
+		345036ED195BBBA400DE7A1C /* TitleScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 345036EA195BBBA400DE7A1C /* TitleScene.cpp */; };
+		345036F0195BC2B200DE7A1C /* TitleSceneCondition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 345036EE195BC2B200DE7A1C /* TitleSceneCondition.cpp */; };
+		345036F1195BC2B200DE7A1C /* TitleSceneCondition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 345036EE195BC2B200DE7A1C /* TitleSceneCondition.cpp */; };
+		345036F4195BF7A400DE7A1C /* SqliteManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 345036F2195BF7A400DE7A1C /* SqliteManager.cpp */; };
+		345036F5195BF7A400DE7A1C /* SqliteManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 345036F2195BF7A400DE7A1C /* SqliteManager.cpp */; };
+		345036FA195C049B00DE7A1C /* library in Resources */ = {isa = PBXBuildFile; fileRef = 345036F9195C049B00DE7A1C /* library */; };
+		345036FB195C049B00DE7A1C /* library in Resources */ = {isa = PBXBuildFile; fileRef = 345036F9195C049B00DE7A1C /* library */; };
+		345036FD195C06FE00DE7A1C /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 345036FC195C06FE00DE7A1C /* libsqlite3.0.dylib */; };
+		345036FF195C274A00DE7A1C /* sql in Resources */ = {isa = PBXBuildFile; fileRef = 345036FE195C274A00DE7A1C /* sql */; };
+		34503700195C274A00DE7A1C /* sql in Resources */ = {isa = PBXBuildFile; fileRef = 345036FE195C274A00DE7A1C /* sql */; };
+		34503702195C2FB100DE7A1C /* data in Resources */ = {isa = PBXBuildFile; fileRef = 34503701195C2FB100DE7A1C /* data */; };
+		34503703195C2FB100DE7A1C /* data in Resources */ = {isa = PBXBuildFile; fileRef = 34503701195C2FB100DE7A1C /* data */; };
+		3450370A195D4D9900DE7A1C /* MagicManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 34503708195D4D9900DE7A1C /* MagicManager.cpp */; };
+		3450370B195D4D9900DE7A1C /* MagicManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 34503708195D4D9900DE7A1C /* MagicManager.cpp */; };
+		3450370E195D7A0800DE7A1C /* Magic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3450370C195D7A0800DE7A1C /* Magic.cpp */; };
+		3450370F195D7A0800DE7A1C /* Magic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3450370C195D7A0800DE7A1C /* Magic.cpp */; };
+		34503717196152E600DE7A1C /* BattleProcessor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 34503715196152E600DE7A1C /* BattleProcessor.cpp */; };
+		34503718196152E600DE7A1C /* BattleProcessor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 34503715196152E600DE7A1C /* BattleProcessor.cpp */; };
+		3450371B1961576800DE7A1C /* BossManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 345037191961576800DE7A1C /* BossManager.cpp */; };
+		3450371C1961576800DE7A1C /* BossManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 345037191961576800DE7A1C /* BossManager.cpp */; };
+		3450371E1962558200DE7A1C /* MainMenuLayout in Resources */ = {isa = PBXBuildFile; fileRef = 3450371D1962558200DE7A1C /* MainMenuLayout */; };
+		3450371F1962558200DE7A1C /* MainMenuLayout in Resources */ = {isa = PBXBuildFile; fileRef = 3450371D1962558200DE7A1C /* MainMenuLayout */; };
+		34B599CF19627AC000FE655A /* StoryModeScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 34B599CD19627AC000FE655A /* StoryModeScene.cpp */; };
+		34B599D019627AC000FE655A /* StoryModeScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 34B599CD19627AC000FE655A /* StoryModeScene.cpp */; };
+		34B658D81964F1E900C216E8 /* Boss.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 34B658D61964F1E900C216E8 /* Boss.cpp */; };
+		34B658D91964F1E900C216E8 /* Boss.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 34B658D61964F1E900C216E8 /* Boss.cpp */; };
+		34E0C43A1962BC40000FBEEC /* PageViewScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 34E0C4381962BC40000FBEEC /* PageViewScene.cpp */; };
 		503AE0F817EB97AB00D1A890 /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 503AE0F617EB97AB00D1A890 /* Icon.icns */; };
 		503AE10017EB989F00D1A890 /* AppController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 503AE0FB17EB989F00D1A890 /* AppController.mm */; };
 		503AE10117EB989F00D1A890 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 503AE0FC17EB989F00D1A890 /* main.m */; };
@@ -258,6 +290,34 @@
 		345036C6195318B700DE7A1C /* BattleSceneLayout */ = {isa = PBXFileReference; lastKnownFileType = folder; path = BattleSceneLayout; sourceTree = "<group>"; };
 		345036D31957FFEC00DE7A1C /* disableTouchLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = disableTouchLayer.cpp; path = ../Classes/disableTouchLayer.cpp; sourceTree = "<group>"; };
 		345036D41957FFEC00DE7A1C /* disableTouchLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = disableTouchLayer.h; path = ../Classes/disableTouchLayer.h; sourceTree = "<group>"; };
+		345036DA19580FC400DE7A1C /* BattleSceneCondition.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BattleSceneCondition.cpp; sourceTree = "<group>"; };
+		345036DB19580FC400DE7A1C /* BattleSceneCondition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BattleSceneCondition.h; sourceTree = "<group>"; };
+		345036DF195873E000DE7A1C /* MagicPlist */ = {isa = PBXFileReference; lastKnownFileType = folder; path = MagicPlist; sourceTree = "<group>"; };
+		345036EA195BBBA400DE7A1C /* TitleScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TitleScene.cpp; sourceTree = "<group>"; };
+		345036EB195BBBA400DE7A1C /* TitleScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleScene.h; sourceTree = "<group>"; };
+		345036EE195BC2B200DE7A1C /* TitleSceneCondition.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TitleSceneCondition.cpp; sourceTree = "<group>"; };
+		345036EF195BC2B200DE7A1C /* TitleSceneCondition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleSceneCondition.h; sourceTree = "<group>"; };
+		345036F2195BF7A400DE7A1C /* SqliteManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SqliteManager.cpp; sourceTree = "<group>"; };
+		345036F3195BF7A400DE7A1C /* SqliteManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SqliteManager.h; sourceTree = "<group>"; };
+		345036F9195C049B00DE7A1C /* library */ = {isa = PBXFileReference; lastKnownFileType = folder; name = library; path = ../Classes/library; sourceTree = "<group>"; };
+		345036FC195C06FE00DE7A1C /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/usr/lib/libsqlite3.0.dylib; sourceTree = DEVELOPER_DIR; };
+		345036FE195C274A00DE7A1C /* sql */ = {isa = PBXFileReference; lastKnownFileType = folder; path = sql; sourceTree = "<group>"; };
+		34503701195C2FB100DE7A1C /* data */ = {isa = PBXFileReference; lastKnownFileType = folder; path = data; sourceTree = "<group>"; };
+		34503708195D4D9900DE7A1C /* MagicManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MagicManager.cpp; sourceTree = "<group>"; };
+		34503709195D4D9900DE7A1C /* MagicManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagicManager.h; sourceTree = "<group>"; };
+		3450370C195D7A0800DE7A1C /* Magic.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Magic.cpp; sourceTree = "<group>"; };
+		3450370D195D7A0800DE7A1C /* Magic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Magic.h; sourceTree = "<group>"; };
+		34503715196152E600DE7A1C /* BattleProcessor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BattleProcessor.cpp; sourceTree = "<group>"; };
+		34503716196152E600DE7A1C /* BattleProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BattleProcessor.h; sourceTree = "<group>"; };
+		345037191961576800DE7A1C /* BossManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BossManager.cpp; sourceTree = "<group>"; };
+		3450371A1961576800DE7A1C /* BossManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BossManager.h; sourceTree = "<group>"; };
+		3450371D1962558200DE7A1C /* MainMenuLayout */ = {isa = PBXFileReference; lastKnownFileType = folder; path = MainMenuLayout; sourceTree = "<group>"; };
+		34B599CD19627AC000FE655A /* StoryModeScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StoryModeScene.cpp; sourceTree = "<group>"; };
+		34B599CE19627AC000FE655A /* StoryModeScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryModeScene.h; sourceTree = "<group>"; };
+		34B658D61964F1E900C216E8 /* Boss.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Boss.cpp; sourceTree = "<group>"; };
+		34B658D71964F1E900C216E8 /* Boss.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Boss.h; sourceTree = "<group>"; };
+		34E0C4381962BC40000FBEEC /* PageViewScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PageViewScene.cpp; sourceTree = "<group>"; };
+		34E0C4391962BC40000FBEEC /* PageViewScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageViewScene.h; sourceTree = "<group>"; };
 		503AE0F617EB97AB00D1A890 /* Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Icon.icns; sourceTree = "<group>"; };
 		503AE0F717EB97AB00D1A890 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		503AE0FA17EB989F00D1A890 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppController.h; path = ios/AppController.h; sourceTree = SOURCE_ROOT; };
@@ -304,6 +364,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				345036FD195C06FE00DE7A1C /* libsqlite3.0.dylib in Frameworks */,
 				1AC6FB2E180E99EB004C840B /* libbox2d iOS.a in Frameworks */,
 				1AC6FB2F180E99EB004C840B /* libchipmunk iOS.a in Frameworks */,
 				1AC6FB30180E99EB004C840B /* libcocos2dx iOS.a in Frameworks */,
@@ -366,6 +427,8 @@
 		15AA9C4015B7EC450033D6C2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				345036F9195C049B00DE7A1C /* library */,
+				345036D819580F8C00DE7A1C /* condtion */,
 				340D9A09194F036C00B1F0A1 /* component */,
 				340D99FA194EF45D00B1F0A1 /* scene */,
 				1AFAF8B316D35DE700DB1158 /* AppDelegate.cpp */,
@@ -423,6 +486,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				345036FC195C06FE00DE7A1C /* libsqlite3.0.dylib */,
 				D6B0611A1803AB670077942B /* CoreMotion.framework */,
 				503AE11A17EB9C5A00D1A890 /* IOKit.framework */,
 				503AE11117EB99EE00D1A890 /* libcurl.dylib */,
@@ -449,6 +513,12 @@
 				340D99FE194EF47100B1F0A1 /* BattleScene.h */,
 				340D9A20194FE5F200B1F0A1 /* MainMenuScene.cpp */,
 				340D9A21194FE5F200B1F0A1 /* MainMenuScene.h */,
+				345036EA195BBBA400DE7A1C /* TitleScene.cpp */,
+				345036EB195BBBA400DE7A1C /* TitleScene.h */,
+				34B599CD19627AC000FE655A /* StoryModeScene.cpp */,
+				34B599CE19627AC000FE655A /* StoryModeScene.h */,
+				34E0C4381962BC40000FBEEC /* PageViewScene.cpp */,
+				34E0C4391962BC40000FBEEC /* PageViewScene.h */,
 			);
 			name = scene;
 			path = ../Classes/scene;
@@ -457,13 +527,45 @@
 		340D9A09194F036C00B1F0A1 /* component */ = {
 			isa = PBXGroup;
 			children = (
+				34503705195D4D8200DE7A1C /* data */,
 				340D9A13194F045300B1F0A1 /* PlayerDeckManager.cpp */,
 				340D9A14194F045300B1F0A1 /* PlayerDeckManager.h */,
 				340D9A17194F048E00B1F0A1 /* PlayerCard.cpp */,
 				340D9A18194F048E00B1F0A1 /* PlayerCard.h */,
+				345036F2195BF7A400DE7A1C /* SqliteManager.cpp */,
+				345036F3195BF7A400DE7A1C /* SqliteManager.h */,
+				3450370C195D7A0800DE7A1C /* Magic.cpp */,
+				3450370D195D7A0800DE7A1C /* Magic.h */,
+				34503715196152E600DE7A1C /* BattleProcessor.cpp */,
+				34503716196152E600DE7A1C /* BattleProcessor.h */,
+				34B658D61964F1E900C216E8 /* Boss.cpp */,
+				34B658D71964F1E900C216E8 /* Boss.h */,
 			);
 			name = component;
 			path = ../Classes/component;
+			sourceTree = "<group>";
+		};
+		345036D819580F8C00DE7A1C /* condtion */ = {
+			isa = PBXGroup;
+			children = (
+				345036DA19580FC400DE7A1C /* BattleSceneCondition.cpp */,
+				345036DB19580FC400DE7A1C /* BattleSceneCondition.h */,
+				345036EE195BC2B200DE7A1C /* TitleSceneCondition.cpp */,
+				345036EF195BC2B200DE7A1C /* TitleSceneCondition.h */,
+			);
+			name = condtion;
+			path = ../Classes/condtion;
+			sourceTree = "<group>";
+		};
+		34503705195D4D8200DE7A1C /* data */ = {
+			isa = PBXGroup;
+			children = (
+				34503708195D4D9900DE7A1C /* MagicManager.cpp */,
+				34503709195D4D9900DE7A1C /* MagicManager.h */,
+				345037191961576800DE7A1C /* BossManager.cpp */,
+				3450371A1961576800DE7A1C /* BossManager.h */,
+			);
+			path = data;
 			sourceTree = "<group>";
 		};
 		503AE0F517EB97AB00D1A890 /* Icons */ = {
@@ -514,6 +616,10 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3450371D1962558200DE7A1C /* MainMenuLayout */,
+				34503701195C2FB100DE7A1C /* data */,
+				345036FE195C274A00DE7A1C /* sql */,
+				345036DF195873E000DE7A1C /* MagicPlist */,
 				345036C6195318B700DE7A1C /* BattleSceneLayout */,
 				345036C11953179200DE7A1C /* UIEditor_BattleScene */,
 				340D9A02194EF48100B1F0A1 /* card */,
@@ -692,6 +798,8 @@
 				5087E78117EB970100C73F5D /* Icon-120.png in Resources */,
 				345036C7195318B700DE7A1C /* BattleSceneLayout in Resources */,
 				5087E78617EB970100C73F5D /* Icon-76.png in Resources */,
+				3450371E1962558200DE7A1C /* MainMenuLayout in Resources */,
+				345036E0195873E000DE7A1C /* MagicPlist in Resources */,
 				5087E77F17EB970100C73F5D /* Default@2x.png in Resources */,
 				50EF629917ECD46A001EB2F8 /* Icon-100.png in Resources */,
 				340D9A05194EF48100B1F0A1 /* card in Resources */,
@@ -700,10 +808,13 @@
 				5087E78317EB970100C73F5D /* Icon-152.png in Resources */,
 				5087E77D17EB970100C73F5D /* Default-568h@2x.png in Resources */,
 				5087E78517EB970100C73F5D /* Icon-72.png in Resources */,
+				345036FA195C049B00DE7A1C /* library in Resources */,
 				1AFAF8BD16D35E4900DB1158 /* CloseSelected.png in Resources */,
 				50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */,
 				5087E78017EB970100C73F5D /* Icon-114.png in Resources */,
+				34503702195C2FB100DE7A1C /* data in Resources */,
 				1AFAF8BE16D35E4900DB1158 /* HelloWorld.png in Resources */,
+				345036FF195C274A00DE7A1C /* sql in Resources */,
 				50EF62A217ECD613001EB2F8 /* Icon-29.png in Resources */,
 				50EF629617ECD46A001EB2F8 /* Icon-40.png in Resources */,
 				5087E78217EB970100C73F5D /* Icon-144.png in Resources */,
@@ -721,10 +832,15 @@
 				5087E75317EB910900C73F5D /* CloseNormal.png in Resources */,
 				345036C8195318B700DE7A1C /* BattleSceneLayout in Resources */,
 				345036C31953179200DE7A1C /* UIEditor_BattleScene in Resources */,
+				34503703195C2FB100DE7A1C /* data in Resources */,
+				345036FB195C049B00DE7A1C /* library in Resources */,
 				503AE0F817EB97AB00D1A890 /* Icon.icns in Resources */,
+				3450371F1962558200DE7A1C /* MainMenuLayout in Resources */,
 				5087E75417EB910900C73F5D /* CloseSelected.png in Resources */,
 				5087E75517EB910900C73F5D /* HelloWorld.png in Resources */,
+				34503700195C274A00DE7A1C /* sql in Resources */,
 				340D9A06194EF48100B1F0A1 /* card in Resources */,
+				345036E1195873E000DE7A1C /* MagicPlist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -735,16 +851,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3450370A195D4D9900DE7A1C /* MagicManager.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
+				345036EC195BBBA400DE7A1C /* TitleScene.cpp in Sources */,
 				340D9A22194FE5F200B1F0A1 /* MainMenuScene.cpp in Sources */,
+				34E0C43A1962BC40000FBEEC /* PageViewScene.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
+				34B658D81964F1E900C216E8 /* Boss.cpp in Sources */,
 				340D99FF194EF47100B1F0A1 /* BattleScene.cpp in Sources */,
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
+				34B599CF19627AC000FE655A /* StoryModeScene.cpp in Sources */,
 				340D9A15194F045300B1F0A1 /* PlayerDeckManager.cpp in Sources */,
 				345036D51957FFEC00DE7A1C /* disableTouchLayer.cpp in Sources */,
+				34503717196152E600DE7A1C /* BattleProcessor.cpp in Sources */,
+				3450371B1961576800DE7A1C /* BossManager.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				340D9A19194F048E00B1F0A1 /* PlayerCard.cpp in Sources */,
+				3450370E195D7A0800DE7A1C /* Magic.cpp in Sources */,
+				345036DC19580FC400DE7A1C /* BattleSceneCondition.cpp in Sources */,
 				1AFAF8B816D35DE700DB1158 /* HelloWorldScene.cpp in Sources */,
+				345036F0195BC2B200DE7A1C /* TitleSceneCondition.cpp in Sources */,
+				345036F4195BF7A400DE7A1C /* SqliteManager.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -752,13 +879,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34B658D91964F1E900C216E8 /* Boss.cpp in Sources */,
 				5087E75717EB910900C73F5D /* AppDelegate.cpp in Sources */,
+				34B599D019627AC000FE655A /* StoryModeScene.cpp in Sources */,
 				340D9A23194FE5F200B1F0A1 /* MainMenuScene.cpp in Sources */,
+				3450371C1961576800DE7A1C /* BossManager.cpp in Sources */,
+				3450370B195D4D9900DE7A1C /* MagicManager.cpp in Sources */,
+				3450370F195D7A0800DE7A1C /* Magic.cpp in Sources */,
+				345036DD19580FC400DE7A1C /* BattleSceneCondition.cpp in Sources */,
 				345036D61957FFEC00DE7A1C /* disableTouchLayer.cpp in Sources */,
+				345036ED195BBBA400DE7A1C /* TitleScene.cpp in Sources */,
 				5087E75817EB910900C73F5D /* HelloWorldScene.cpp in Sources */,
 				340D9A16194F045300B1F0A1 /* PlayerDeckManager.cpp in Sources */,
+				345036F5195BF7A400DE7A1C /* SqliteManager.cpp in Sources */,
 				340D9A00194EF47100B1F0A1 /* BattleScene.cpp in Sources */,
 				340D9A1A194F048E00B1F0A1 /* PlayerCard.cpp in Sources */,
+				34503718196152E600DE7A1C /* BattleProcessor.cpp in Sources */,
+				345036F1195BC2B200DE7A1C /* TitleSceneCondition.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

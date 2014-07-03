@@ -1,0 +1,2 @@
+[{"id":1,"name":"見習い魔導士","element_identifer":1,"stage_id":1,"message_start":"ふぇぇ、、いきなりこんなバトルになるなんてきいてないよぉぉ","message_win":"え？私かったの！？やったー！勝ったの〜♪","message_lose":"だから無理だっていったのに。。ぐすん。。"},
+{"id":2,"name":"地の魔導士","element_identifer":1,"stage_id":1,"message_start":"見習い魔導士を倒したくらいで調子づきやがって、本当の魔法を見せてやる","message_win":"手こずらせやがってっ！みたか？これが本当の魔法だ！","message_lose":"負けたのか！？この俺が。。。？"}]

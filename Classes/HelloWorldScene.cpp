@@ -1,5 +1,5 @@
 #include "HelloWorldScene.h"
-#include "scene/BattleScene.h"
+#include "scene/StoryModeScene.h"
 
 USING_NS_CC;
 
@@ -84,7 +84,7 @@ bool HelloWorld::init()
 //シーンの切り替え
 void HelloWorld::complted(float delta)
 {
-    Director::getInstance()->replaceScene(TransitionFade::create(0.5f, BattleScene::createScene()));
+    Director::getInstance()->replaceScene(TransitionFade::create(0.5f, StoryModeScene::createScene()));
 }
 
 void HelloWorld::menuCloseCallback(Ref* pSender)

@@ -13,7 +13,16 @@
   <ProjectType>UIProject</ProjectType>
   <ResRelativePath />
   <imageFileList />
-  <imagePngList />
+  <imagePngList>
+    <string>stage/BackGround_001.png</string>
+    <string>layout/DeckList.png</string>
+    <string>layout/TurnCountIcon.png</string>
+    <string>layout/Attack_Button.png</string>
+    <string>layout/Attack_Button_2.png</string>
+    <string>layout/Attack_Button_3.png</string>
+    <string>layout/HPGaugeFrame.png</string>
+    <string>layout/HPGauge.png</string>
+  </imagePngList>
   <JsonSuffix>.json</JsonSuffix>
   <CurrentUIJson>BattleSceneLayout.json</CurrentUIJson>
   <CanvasSize>

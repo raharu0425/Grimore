@@ -22,6 +22,7 @@ public :
     static PlayerCard* create(const std::string& filename);
     
     CC_SYNTHESIZE(int, _index, Index);
+    CC_SYNTHESIZE(int, _identifier, Identifer);
     CC_SYNTHESIZE(bool, _is_Selected, Selected);
     CC_SYNTHESIZE(bool, _is_lock, Lock);
     
