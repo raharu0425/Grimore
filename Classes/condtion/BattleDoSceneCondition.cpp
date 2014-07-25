@@ -1,31 +1,32 @@
 //
-//  TitleSceneCondition.cpp
+//  BattleDoSceneCondition.cpp
 //  Grimore
 //
-//  Created by raharu on 2014/06/26.
+//  Created by raharu on 2014/07/08.
 //
 //
 
-#include "TitleSceneCondition.h"
-#include "../scene/StoryModeScene.h"
+#include "BattleDoSceneCondition.h"
+#include "../scene/BattleScene.h"
 #include "../Config.h"
 
-static TitleSceneCondition *instance = nullptr;
+static BattleDoSceneCondition *instance = nullptr;
 
-TitleSceneCondition::TitleSceneCondition():
+BattleDoSceneCondition::BattleDoSceneCondition():
 _error_msg("No setting")
 {
+    setLock(false);
 }
 
-TitleSceneCondition::~TitleSceneCondition()
+BattleDoSceneCondition::~BattleDoSceneCondition()
 {
     
 }
 
 //インスタンスの返却
-TitleSceneCondition* TitleSceneCondition::getInstance()
+BattleDoSceneCondition* BattleDoSceneCondition::getInstance()
 {
-    instance = new TitleSceneCondition();
+    instance = new BattleDoSceneCondition();
     instance->autorelease();
     instance->retain();
     
@@ -33,13 +34,13 @@ TitleSceneCondition* TitleSceneCondition::getInstance()
 }
 
 //クライアント処理を追加する
-void TitleSceneCondition::setDelegate(TitleSceneConditionDelegate *delegate)
+void BattleDoSceneCondition::setDelegate(BattleDoSceneConditionDelegate *delegate)
 {
     this->delegate = delegate;
 }
 
 //コンディションの加算
-void TitleSceneCondition::addCondition(int param)
+void BattleDoSceneCondition::addCondition(int param)
 {
     if(getLock()) return;
     if(!(this->getCondition() & param)){
@@ -49,7 +50,7 @@ void TitleSceneCondition::addCondition(int param)
 }
 
 //コンディションの減算
-void TitleSceneCondition::delCondition(int param)
+void BattleDoSceneCondition::delCondition(int param)
 {
     if(getLock()) return;
     if((this->getCondition() & param)){
@@ -59,32 +60,29 @@ void TitleSceneCondition::delCondition(int param)
 }
 
 //メッセージの取得
-std::string TitleSceneCondition::getErrorMessage()
+std::string BattleDoSceneCondition::getErrorMessage()
 {
     return this->_error_msg;
 }
 
 //エラー発生
-void TitleSceneCondition::onError(std::string error_msg)
+void BattleDoSceneCondition::onError(std::string error_msg)
 {
     this->_error_msg = error_msg;
     this->setCondition(IS_ERROR);
 }
 
 //スタート
-void TitleSceneCondition::onStart()
+void BattleDoSceneCondition::onStart()
 {
     this->addCondition(IS_START);
 }
 
 //コンプリート
-void TitleSceneCondition::onComplete()
+void BattleDoSceneCondition::onComplete()
 {
     if(getLock()) return;
     setLock(true);
     this->setCondition(IS_COMPLETE);
-    
-    //UserDefault
-    UserDefault::getInstance()->setIntegerForKey("database_version", APP_VERSION);
-    Director::getInstance()->replaceScene(TransitionFade::create(1.0f, StoryModeScene::createScene()));
+    Director::getInstance()->replaceScene(TransitionFade::create(2.0f, BattleScene::createScene()));
 }

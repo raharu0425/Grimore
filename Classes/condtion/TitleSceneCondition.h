@@ -22,6 +22,7 @@ USING_NS_CC;
 #define IS_CREATE_BOSS_DATA 16
 #define IS_CREATE_STAGE_DATA 32
 #define IS_CREATE_ELEMENT_DATA 64
+#define IS_CREATE_ROOM_DATA 128
 
 //Delegateクラス
 class TitleSceneConditionDelegate
@@ -59,6 +60,7 @@ public:
     bool isCreateBossData(){ return this->getCondition() & IS_CREATE_BOSS_DATA;}
     bool isCreateStageData(){ return this->getCondition() & IS_CREATE_STAGE_DATA;}
     bool isCreateElementData(){ return this->getCondition() & IS_CREATE_ELEMENT_DATA;}
+    bool isCreateRoomData(){return this->getCondition() & IS_CREATE_ROOM_DATA;}
     bool isComplete(){ return this->getCondition() & IS_COMPLETE; }
     
     //状態変化
@@ -68,6 +70,7 @@ public:
     void onCreateBossData(){ this->setCondition(IS_CREATE_BOSS_DATA); }
     void onCreateStageData(){ this->setCondition(IS_CREATE_STAGE_DATA); }
     void onCreateElementData(){ this->setCondition(IS_CREATE_ELEMENT_DATA); }
+    void onCreateRoomData(){ this->setCondition(IS_CREATE_ROOM_DATA); }
     void onComplete();
 };
 

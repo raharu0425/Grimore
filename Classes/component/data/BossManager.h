@@ -25,6 +25,9 @@ public:
     //テーブルネーム
     CC_SYNTHESIZE(std::string, _table_name, TableName);
     
+    //取得
+    Boss* getById(int id);
+    
     //全てのボスを取得
     std::vector<Boss*> getAllBoss();
     

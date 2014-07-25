@@ -38,7 +38,7 @@ public :
     void update(float delta);
     void complted(float delta);
     
-    void createData(const char* data_name);
+    void createData(const char* data_name, bool is_force_delete);
     
     void createSkillData();
     void createBossData();

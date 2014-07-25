@@ -68,11 +68,18 @@
 		3450371C1961576800DE7A1C /* BossManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 345037191961576800DE7A1C /* BossManager.cpp */; };
 		3450371E1962558200DE7A1C /* MainMenuLayout in Resources */ = {isa = PBXBuildFile; fileRef = 3450371D1962558200DE7A1C /* MainMenuLayout */; };
 		3450371F1962558200DE7A1C /* MainMenuLayout in Resources */ = {isa = PBXBuildFile; fileRef = 3450371D1962558200DE7A1C /* MainMenuLayout */; };
+		346BE220196B915000640BFC /* BattleDoScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 346BE21E196B915000640BFC /* BattleDoScene.cpp */; };
+		346BE221196B915000640BFC /* BattleDoScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 346BE21E196B915000640BFC /* BattleDoScene.cpp */; };
+		346BE226196BB10300640BFC /* BattleDoSceneCondition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 346BE224196BB10300640BFC /* BattleDoSceneCondition.cpp */; };
+		346BE227196BB10300640BFC /* BattleDoSceneCondition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 346BE224196BB10300640BFC /* BattleDoSceneCondition.cpp */; };
+		346BE22A196BBB1D00640BFC /* Room.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 346BE228196BBB1D00640BFC /* Room.cpp */; };
+		346BE22B196BBB1D00640BFC /* Room.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 346BE228196BBB1D00640BFC /* Room.cpp */; };
+		346BE22E196BBBFC00640BFC /* RoomManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 346BE22C196BBBFC00640BFC /* RoomManager.cpp */; };
+		346BE22F196BBBFC00640BFC /* RoomManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 346BE22C196BBBFC00640BFC /* RoomManager.cpp */; };
 		34B599CF19627AC000FE655A /* StoryModeScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 34B599CD19627AC000FE655A /* StoryModeScene.cpp */; };
 		34B599D019627AC000FE655A /* StoryModeScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 34B599CD19627AC000FE655A /* StoryModeScene.cpp */; };
 		34B658D81964F1E900C216E8 /* Boss.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 34B658D61964F1E900C216E8 /* Boss.cpp */; };
 		34B658D91964F1E900C216E8 /* Boss.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 34B658D61964F1E900C216E8 /* Boss.cpp */; };
-		34E0C43A1962BC40000FBEEC /* PageViewScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 34E0C4381962BC40000FBEEC /* PageViewScene.cpp */; };
 		503AE0F817EB97AB00D1A890 /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 503AE0F617EB97AB00D1A890 /* Icon.icns */; };
 		503AE10017EB989F00D1A890 /* AppController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 503AE0FB17EB989F00D1A890 /* AppController.mm */; };
 		503AE10117EB989F00D1A890 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 503AE0FC17EB989F00D1A890 /* main.m */; };
@@ -312,12 +319,18 @@
 		345037191961576800DE7A1C /* BossManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BossManager.cpp; sourceTree = "<group>"; };
 		3450371A1961576800DE7A1C /* BossManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BossManager.h; sourceTree = "<group>"; };
 		3450371D1962558200DE7A1C /* MainMenuLayout */ = {isa = PBXFileReference; lastKnownFileType = folder; path = MainMenuLayout; sourceTree = "<group>"; };
+		346BE21E196B915000640BFC /* BattleDoScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BattleDoScene.cpp; sourceTree = "<group>"; };
+		346BE21F196B915000640BFC /* BattleDoScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BattleDoScene.h; sourceTree = "<group>"; };
+		346BE224196BB10300640BFC /* BattleDoSceneCondition.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BattleDoSceneCondition.cpp; sourceTree = "<group>"; };
+		346BE225196BB10300640BFC /* BattleDoSceneCondition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BattleDoSceneCondition.h; sourceTree = "<group>"; };
+		346BE228196BBB1D00640BFC /* Room.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Room.cpp; sourceTree = "<group>"; };
+		346BE229196BBB1D00640BFC /* Room.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Room.h; sourceTree = "<group>"; };
+		346BE22C196BBBFC00640BFC /* RoomManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RoomManager.cpp; sourceTree = "<group>"; };
+		346BE22D196BBBFC00640BFC /* RoomManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoomManager.h; sourceTree = "<group>"; };
 		34B599CD19627AC000FE655A /* StoryModeScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StoryModeScene.cpp; sourceTree = "<group>"; };
 		34B599CE19627AC000FE655A /* StoryModeScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryModeScene.h; sourceTree = "<group>"; };
 		34B658D61964F1E900C216E8 /* Boss.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Boss.cpp; sourceTree = "<group>"; };
 		34B658D71964F1E900C216E8 /* Boss.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Boss.h; sourceTree = "<group>"; };
-		34E0C4381962BC40000FBEEC /* PageViewScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PageViewScene.cpp; sourceTree = "<group>"; };
-		34E0C4391962BC40000FBEEC /* PageViewScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageViewScene.h; sourceTree = "<group>"; };
 		503AE0F617EB97AB00D1A890 /* Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Icon.icns; sourceTree = "<group>"; };
 		503AE0F717EB97AB00D1A890 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		503AE0FA17EB989F00D1A890 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppController.h; path = ios/AppController.h; sourceTree = SOURCE_ROOT; };
@@ -517,8 +530,8 @@
 				345036EB195BBBA400DE7A1C /* TitleScene.h */,
 				34B599CD19627AC000FE655A /* StoryModeScene.cpp */,
 				34B599CE19627AC000FE655A /* StoryModeScene.h */,
-				34E0C4381962BC40000FBEEC /* PageViewScene.cpp */,
-				34E0C4391962BC40000FBEEC /* PageViewScene.h */,
+				346BE21E196B915000640BFC /* BattleDoScene.cpp */,
+				346BE21F196B915000640BFC /* BattleDoScene.h */,
 			);
 			name = scene;
 			path = ../Classes/scene;
@@ -540,6 +553,8 @@
 				34503716196152E600DE7A1C /* BattleProcessor.h */,
 				34B658D61964F1E900C216E8 /* Boss.cpp */,
 				34B658D71964F1E900C216E8 /* Boss.h */,
+				346BE228196BBB1D00640BFC /* Room.cpp */,
+				346BE229196BBB1D00640BFC /* Room.h */,
 			);
 			name = component;
 			path = ../Classes/component;
@@ -552,6 +567,8 @@
 				345036DB19580FC400DE7A1C /* BattleSceneCondition.h */,
 				345036EE195BC2B200DE7A1C /* TitleSceneCondition.cpp */,
 				345036EF195BC2B200DE7A1C /* TitleSceneCondition.h */,
+				346BE224196BB10300640BFC /* BattleDoSceneCondition.cpp */,
+				346BE225196BB10300640BFC /* BattleDoSceneCondition.h */,
 			);
 			name = condtion;
 			path = ../Classes/condtion;
@@ -564,6 +581,8 @@
 				34503709195D4D9900DE7A1C /* MagicManager.h */,
 				345037191961576800DE7A1C /* BossManager.cpp */,
 				3450371A1961576800DE7A1C /* BossManager.h */,
+				346BE22C196BBBFC00640BFC /* RoomManager.cpp */,
+				346BE22D196BBBFC00640BFC /* RoomManager.h */,
 			);
 			path = data;
 			sourceTree = "<group>";
@@ -855,9 +874,10 @@
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				345036EC195BBBA400DE7A1C /* TitleScene.cpp in Sources */,
 				340D9A22194FE5F200B1F0A1 /* MainMenuScene.cpp in Sources */,
-				34E0C43A1962BC40000FBEEC /* PageViewScene.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				34B658D81964F1E900C216E8 /* Boss.cpp in Sources */,
+				346BE220196B915000640BFC /* BattleDoScene.cpp in Sources */,
+				346BE226196BB10300640BFC /* BattleDoSceneCondition.cpp in Sources */,
 				340D99FF194EF47100B1F0A1 /* BattleScene.cpp in Sources */,
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
 				34B599CF19627AC000FE655A /* StoryModeScene.cpp in Sources */,
@@ -865,6 +885,8 @@
 				345036D51957FFEC00DE7A1C /* disableTouchLayer.cpp in Sources */,
 				34503717196152E600DE7A1C /* BattleProcessor.cpp in Sources */,
 				3450371B1961576800DE7A1C /* BossManager.cpp in Sources */,
+				346BE22A196BBB1D00640BFC /* Room.cpp in Sources */,
+				346BE22E196BBBFC00640BFC /* RoomManager.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				340D9A19194F048E00B1F0A1 /* PlayerCard.cpp in Sources */,
 				3450370E195D7A0800DE7A1C /* Magic.cpp in Sources */,
@@ -881,11 +903,14 @@
 			files = (
 				34B658D91964F1E900C216E8 /* Boss.cpp in Sources */,
 				5087E75717EB910900C73F5D /* AppDelegate.cpp in Sources */,
+				346BE22F196BBBFC00640BFC /* RoomManager.cpp in Sources */,
 				34B599D019627AC000FE655A /* StoryModeScene.cpp in Sources */,
 				340D9A23194FE5F200B1F0A1 /* MainMenuScene.cpp in Sources */,
 				3450371C1961576800DE7A1C /* BossManager.cpp in Sources */,
 				3450370B195D4D9900DE7A1C /* MagicManager.cpp in Sources */,
+				346BE22B196BBB1D00640BFC /* Room.cpp in Sources */,
 				3450370F195D7A0800DE7A1C /* Magic.cpp in Sources */,
+				346BE221196B915000640BFC /* BattleDoScene.cpp in Sources */,
 				345036DD19580FC400DE7A1C /* BattleSceneCondition.cpp in Sources */,
 				345036D61957FFEC00DE7A1C /* disableTouchLayer.cpp in Sources */,
 				345036ED195BBBA400DE7A1C /* TitleScene.cpp in Sources */,
@@ -897,6 +922,7 @@
 				34503718196152E600DE7A1C /* BattleProcessor.cpp in Sources */,
 				345036F1195BC2B200DE7A1C /* TitleSceneCondition.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
+				346BE227196BB10300640BFC /* BattleDoSceneCondition.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

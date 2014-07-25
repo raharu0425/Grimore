@@ -7,7 +7,7 @@
 //
 
 #include "StoryModeScene.h"
-#include "BattleScene.h"
+#include "BattleDoScene.h"
 
 USING_NS_CC;
 using namespace ui;
@@ -93,7 +93,8 @@ void StoryModeScene::touchEvent(cocos2d::Ref* sender, cocos2d::ui::TouchEventTyp
     if(type == TOUCH_EVENT_BEGAN){
     }else if(type == TOUCH_EVENT_ENDED){
         auto button = (Button*) sender;
-        Director::getInstance()->replaceScene(TransitionFade::create(2.0f, BattleScene::createScene(button->getTag())));
+        //Director::getInstance()->replaceScene(TransitionFade::create(2.0f, BattleDoScene::createScene(button->getTag())));
+        Director::getInstance()->replaceScene(BattleDoScene::createScene(button->getTag()));
     }
 }
 

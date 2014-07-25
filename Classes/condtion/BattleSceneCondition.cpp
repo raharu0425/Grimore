@@ -19,10 +19,8 @@ static BattleSceneCondition *instance = nullptr;
 
 BattleSceneCondition::BattleSceneCondition()
 {
-    /*
     this->setLock(false);
-    this->setCondition(IS_ENABLE);
-     */
+    this->setCondition(IS_NONE);
 }
 
 BattleSceneCondition::~BattleSceneCondition()

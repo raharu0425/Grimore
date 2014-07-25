@@ -10,7 +10,7 @@
 #define Grimore_Config_h
 
 //バージョン
-#define APP_VERSION 1
+#define APP_VERSION 2
 
 //手持ちの札数
 #define HANDS_DECK 6
@@ -26,6 +26,10 @@
 #define CARD_THUNDER 259
 #define CARD_DARK 1555
 #define CARD_HOLY 9331
+
+//バトル設定
+#define MAX_HP 500
+#define MAX_TURN 10
 
 //ZIndexはそのまま優先度となる
 enum kBattleScenePriorty{

@@ -17,6 +17,7 @@
 
 #include "../component/PlayerDeckManager.h"
 #include "../component/data/MagicManager.h"
+#include "../component/data/RoomManager.h"
 #include "../component/BattleProcessor.h"
 #include "../condtion/BattleSceneCondition.h"
 #include "../disableTouchLayer.h"
@@ -29,12 +30,9 @@ private:
     virtual ~BattleScene();
     BattleScene();
     
-    int _battle_boss_id;
 public:
-    static cocos2d::Scene* createScene(int boss_id);
+    static cocos2d::Scene* createScene();
     virtual bool init();
-    virtual void onEnter();
-    
     CREATE_FUNC(BattleScene);
     
     //ConditionDelegate

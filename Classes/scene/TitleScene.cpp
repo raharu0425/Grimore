@@ -55,7 +55,7 @@ bool TitleScene::init()
     if(db_version == APP_VERSION){
         scheduleOnce(schedule_selector(TitleScene::complted), 2.0f);
     }else{
-        //ロードの読み込み
+        //スタート
         condition->onStart();
     }
     
@@ -73,47 +73,53 @@ void TitleScene::update(float delta)
     
     //DBの存在チェックをおこなってから開始
     if(condition->isStart()){
-        /*
-        std::string dbPath = FileUtils::getInstance()->getWritablePath() + "Grimore.db";
-        CCLOG("%s", dbPath.c_str());
-        sqlite->setDB(dbPath.c_str());
-         */
         condition->onCreateSkillData();
     }
     
     //スキルテーブルの作成
     if(condition->isCreateSkillData()){
-        createData("data_magic");
+        createData("data_magic", true);
         condition->onCreateBossData();
     }
     
     //ボスデータテーブル作成
     if(condition->isCreateBossData()){
-        createData("data_boss");
+        createData("data_boss", true);
         condition->onCreateStageData();
     }
     
     //ステージデータテーブル作成
     if(condition->isCreateStageData()){
-        createData("data_stage");
+        createData("data_stage", true);
         condition->onCreateElementData();
     }
     
     //属性データテーブル作成
     if(condition->isCreateElementData()){
-        createData("data_element");
+        createData("data_element", true);
+        condition->onCreateRoomData();
+    }
+    
+    //ルームデータテーブル作成
+    if(condition->isCreateRoomData()){
+        createData("room", false);
+        createData("room_detail", false);
         condition->onComplete();
     }
 }
 
 //データの作成
-void TitleScene::createData(const char* data_name)
+void TitleScene::createData(const char* data_name, bool is_force_delete)
 {
     auto sql_path = StringUtils::format("sql/%s.sql", data_name);
     auto json_path = StringUtils::format("data/%s.json", data_name);
     
     //テーブルが存在する場合は削除
     if(sqlite->tableIsExist(data_name)){
+        
+        //アップデート毎に削除しないテーブルは存在していたらリターン
+        if(!is_force_delete) return;
+        
         sqlite->dropTable(data_name);
     }
     
@@ -149,5 +155,5 @@ void TitleScene::createData(const char* data_name)
 //シーンの切り替え
 void TitleScene::complted(float delta)
 {
-    Director::getInstance()->replaceScene(TransitionFade::create(2.0f, StoryModeScene::createScene()));
+    Director::getInstance()->replaceScene(TransitionFade::create(1.0f, StoryModeScene::createScene()));
 }

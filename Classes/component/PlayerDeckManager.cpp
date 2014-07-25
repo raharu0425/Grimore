@@ -79,6 +79,7 @@ void PlayerDeckManager::setDeckByCard(int identifer, int count_max)
 //手持ち札をリロードする
 void PlayerDeckManager::reload2HandsCards()
 {
+    srand((unsigned int)time(NULL));
     auto deck = this->getDeck();
     auto hans_cards = this->getHandsCards();
     

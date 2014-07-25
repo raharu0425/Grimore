@@ -23,7 +23,7 @@ public:
     virtual ~MagicManager();
     
     //テーブルネーム
-    CC_SYNTHESIZE(std::string, _table_name, TableName)
+    CC_SYNTHESIZE(std::string, _table_name, TableName);
     
     //取得
     Magic* getById(int id);

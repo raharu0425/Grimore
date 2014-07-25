@@ -19,14 +19,11 @@ USING_NS_CC_EXT;
 using namespace cocostudio;
 using namespace ui;
 
-Scene* BattleScene::createScene(int boss_id)
+Scene* BattleScene::createScene()
 {
     auto scene = Scene::create();
     auto layer = BattleScene::create();
     
-    
-    CCLOG("input_boss_id:%d", boss_id);
-    layer->_battle_boss_id = boss_id;
     scene->addChild(layer);
     
     return scene;
@@ -49,17 +46,18 @@ bool BattleScene::init()
 {
     if ( !Layer::init() ) return false;
     
+    //基本サイズ
+    visibleSize = Director::getInstance()->getVisibleSize();
+    origin = Director::getInstance()->getVisibleOrigin();
+    
+    
     //Condition
     condition = BattleSceneCondition::getInstance();
     condition->setDelegate(this);
     
-    //DBオープン
-    std::string dbPath = FileUtils::getInstance()->getWritablePath() + "Grimore.db";
-    MagicManager::getInstance()->setDB(dbPath.c_str());
-    
-    
-    visibleSize = Director::getInstance()->getVisibleSize();
-    origin = Director::getInstance()->getVisibleOrigin();
+    //ルーム取得
+    auto roomManager = RoomManager::getInstance();
+    auto room = roomManager->getBattlingRoom();
     
 #if COCOS2D_DEBUG
     CCLOG("vsizeX:%f", visibleSize.width);
@@ -71,9 +69,11 @@ bool BattleScene::init()
     //Cocostudio
     widget = GUIReader::getInstance()->widgetFromJsonFile("BattleSceneLayout/BattleSceneLayout.json");
     //差分を出す
+    /*
     auto diff = visibleSize.height - 480;
     widget->setPositionY(diff / 2);
     this->origin.y = diff / 2;
+     */
     this->addChild(widget, kBattleScenePriorty::Layout);
     
     //攻撃ボタンリスナー
@@ -81,6 +81,18 @@ bool BattleScene::init()
     button->addTouchEventListener(this, toucheventselector(BattleScene::onTouchAttackButton));
     button->setTouchEnabled(false);
     button->setBright(false);
+    
+    //名前
+    auto my_name = (Text*)widget->getChildByName("NameLeft");
+    my_name->setText(room->getMyName());
+    auto opp_name = (Text*)widget->getChildByName("NameRight");
+    opp_name->setText(room->getOppName());
+    
+    //ターンカウント
+    auto turn_count = (ImageView*)widget->getChildByName("TurnCount");
+    auto turn_label = (TextAtlas*)turn_count->getChildByName("TurnCountLabel");
+    turn_label->setStringValue(std::to_string(room->getTurn()));
+    
     
     //プレイヤーデッキインスタンス
     deck = PlayerDeckManager::getInstance();
@@ -105,16 +117,9 @@ bool BattleScene::init()
     this->schedule(schedule_selector(BattleScene::battleUpdate));
     
     //デバック用
-    scheduleOnce(schedule_selector(BattleScene::complted), 5.0f);
+    //scheduleOnce(schedule_selector(BattleScene::complted), 5.0f);
     
     return true;
-}
-
-void BattleScene::onEnter()
-{
-    Layer::onEnter();
-    
-    CCLOG("output_boss_id:%d", this->_battle_boss_id);
 }
 
 //フレーム処理
@@ -189,5 +194,5 @@ bool BattleScene::onTouchAttackButton(cocos2d::Ref* sender, cocos2d::ui::TouchEv
 //シーンの切り替え
 void BattleScene::complted(float delta)
 {
-    Director::getInstance()->replaceScene(TransitionFade::create(2.0f, StoryModeScene::createScene()));
+    //Director::getInstance()->replaceScene(TransitionFade::create(2.0f, StoryModeScene::createScene()));
 }

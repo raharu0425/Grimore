@@ -137,7 +137,8 @@ void SqliteManager::addPicoJsonObject(const std::string &table_name, picojson::o
     values.pop_back();
     
     std::string sql = "INSERT INTO "+ table_name +" (" + cols + ") VALUES (" + values + ")";
-    //CCLOG("sql:%s", sql.c_str());
+    CCLOG("sql:%s", sql.c_str());
+    
     _result = this->executeQuery(sql);
     if (_result != SQLITE_OK)
     {

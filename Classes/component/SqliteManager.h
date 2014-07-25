@@ -13,6 +13,7 @@
 #include "cocos2d.h"
 #include "../library/sqlite/sqlite3.h"
 #include "../library/json/picojson.h"
+#include "../Config.h"
 
 class SqliteManager
 {
