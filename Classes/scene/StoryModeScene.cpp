@@ -46,15 +46,15 @@ bool StoryModeScene::init()
         auto layout = Layout::create();
         auto boss = (Boss*) *boss_itr;
              
-        layout->setSize(windowSize);
+        layout->setContentSize(windowSize);
         //名前
         auto name = Text::create(boss->getName().c_str(), "Arial", 23);
-        name->setPosition(Point(layout->getSize().width / 2, layout->getSize().height / 2));
+        name->setPosition(Point(layout->getContentSize().width / 2, layout->getContentSize().height / 2));
         layout->addChild(name);
         
         //メッセージ
         auto message = LabelTTF::create(boss->getMessageStart(), "Futura-Medium", 15);
-        message->setPosition(Point(layout->getSize().width / 2, layout->getSize().height / 2 - 50));
+        message->setPosition(Point(layout->getContentSize().width / 2, layout->getContentSize().height / 2 - 50));
         message->setDimensions(Size(280, 60));
         message->setHorizontalAlignment(TextHAlignment::LEFT);
         message->setVerticalAlignment(TextVAlignment::TOP);
@@ -66,7 +66,7 @@ bool StoryModeScene::init()
         startButton->setAnchorPoint(Point(0.5, 1.0));
         startButton->loadTextures("BattleSceneLayout/layout/Attack_Button.png","","");
         startButton->setTitleText("バトルする");
-        startButton->setPosition(Point(layout->getSize().width / 2, layout->getSize().height / 2 - 100));
+        startButton->setPosition(Point(layout->getContentSize().width / 2, layout->getContentSize().height / 2 - 100));
         startButton->setTag(boss->getId());
         startButton->addTouchEventListener(this, toucheventselector(StoryModeScene::touchEvent));
         layout->addChild(startButton);
@@ -102,7 +102,7 @@ void StoryModeScene::touchEvent(cocos2d::Ref* sender, cocos2d::ui::TouchEventTyp
 void StoryModeScene::pageviewCallBack(Ref* sender, PageViewEventType type)
 {
     if(type == PAGEVIEW_EVENT_TURNING){
-        auto pageView = dynamic_cast<PageView*>(sender);
+        //auto pageView = dynamic_cast<PageView*>(sender);
         
         //選択されているページをログに出力
         //log("%ld",pageView->getCurPageIndex() + 1);

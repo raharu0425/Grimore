@@ -84,14 +84,14 @@ bool BattleScene::init()
     
     //名前
     auto my_name = (Text*)widget->getChildByName("NameLeft");
-    my_name->setText(room->getMyName());
+    my_name->setString(room->getMyName());
     auto opp_name = (Text*)widget->getChildByName("NameRight");
-    opp_name->setText(room->getOppName());
+    opp_name->setString(room->getOppName());
     
     //ターンカウント
     auto turn_count = (ImageView*)widget->getChildByName("TurnCount");
     auto turn_label = (TextAtlas*)turn_count->getChildByName("TurnCountLabel");
-    turn_label->setStringValue(std::to_string(room->getTurn()));
+    turn_label->setString(std::to_string(room->getTurn()));
     
     
     //プレイヤーデッキインスタンス

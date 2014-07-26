@@ -132,7 +132,7 @@ void BattleSceneCondition::executeBattle()
     });
     
     auto callFunc = CallFunc::create([layer](){
-        CCParticleSystemQuad* particle = CCParticleSystemQuad::create("MagicPlist/259.plist");
+        ParticleSystemQuad* particle = ParticleSystemQuad::create("MagicPlist/259.plist");
         particle->setScale(0.5f);
         particle->setPosition(Point(230,240));
         layer->addChild(particle,5);

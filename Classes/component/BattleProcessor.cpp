@@ -40,8 +40,8 @@ bool BattleProcessor::init()
 
 void BattleProcessor::execute()
 {
-    auto my_magic = getMyMagic();
-    auto opp_magic = getOppMagic();
+    //auto my_magic = getMyMagic();
+    //auto opp_magic = getOppMagic();
     
     //自分の攻撃を食らわせる
     

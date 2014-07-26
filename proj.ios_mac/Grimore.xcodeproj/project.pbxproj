@@ -1003,6 +1003,7 @@
 					"$(inherited)",
 					"$(SRCROOT)/../cocos2d/cocos/2d/platform/ios",
 					"$(SRCROOT)/../cocos2d/cocos/2d/platform/ios/Simulation",
+					"$(SRCROOT)/../cocos2d/cocos/platform/ios",
 				);
 				INFOPLIST_FILE = ios/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
@@ -1032,6 +1033,7 @@
 					"$(inherited)",
 					"$(SRCROOT)/../cocos2d/cocos/2d/platform/ios",
 					"$(SRCROOT)/../cocos2d/cocos/2d/platform/ios/Simulation",
+					"$(SRCROOT)/../cocos2d/cocos/platform/ios",
 				);
 				INFOPLIST_FILE = ios/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
