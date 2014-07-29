@@ -68,7 +68,15 @@ bool StoryModeScene::init()
         startButton->setTitleText("バトルする");
         startButton->setPosition(Point(layout->getContentSize().width / 2, layout->getContentSize().height / 2 - 100));
         startButton->setTag(boss->getId());
-        startButton->addTouchEventListener(this, toucheventselector(StoryModeScene::touchEvent));
+        
+        //遷移
+        startButton->addTouchEventListener([this](Ref* sender, Widget::TouchEventType type){
+            if(type == Widget::TouchEventType::ENDED){
+                auto button = (Button*) sender;
+                Director::getInstance()->replaceScene(BattleDoScene::createScene(button->getTag()));
+            }
+        });
+        
         layout->addChild(startButton);
         
         
@@ -79,23 +87,11 @@ bool StoryModeScene::init()
     }
     
     //イベントリスナーを追加（using namespace ui; しないと参照出来ないので注意）
-    pageView->addEventListenerPageView(this, pagevieweventselector(StoryModeScene::pageviewCallBack));
+    //pageView->addEventListenerPageView(this, pagevieweventselector(StoryModeScene::pageviewCallBack));
     
     this->addChild(pageView);
     
     return true;
-}
-
-
-//バトル開始ボタンスタート
-void StoryModeScene::touchEvent(cocos2d::Ref* sender, cocos2d::ui::TouchEventType type)
-{
-    if(type == TOUCH_EVENT_BEGAN){
-    }else if(type == TOUCH_EVENT_ENDED){
-        auto button = (Button*) sender;
-        //Director::getInstance()->replaceScene(TransitionFade::create(2.0f, BattleDoScene::createScene(button->getTag())));
-        Director::getInstance()->replaceScene(BattleDoScene::createScene(button->getTag()));
-    }
 }
 
 //コールバック

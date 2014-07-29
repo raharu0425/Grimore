@@ -38,6 +38,15 @@ PlayerCard* PlayerCard::create(const std::string& filename)
     return nullptr;
 }
 
+//カード初期か
+void PlayerCard::initParam()
+{
+    setIndex(0);
+    setSelected(false);
+    setLock(false);
+}
+
+
 bool PlayerCard::onTouchBegan(cocos2d::Touch* touch, cocos2d::Event* unused_event)
 {
     if(getLock()) return false;

@@ -38,7 +38,7 @@ void RoomManager::createRoom(Boss *boss)
     object.insert(std::make_pair("condition", picojson::value((double)1)));
     object.insert(std::make_pair("boss_id", picojson::value((double)boss->getId())));
     object.insert(std::make_pair("stage_id", picojson::value((double)boss->getStageId())));
-    object.insert(std::make_pair("my_name", picojson::value((std::string)"my_name")));
+    object.insert(std::make_pair("my_name", picojson::value((std::string)"Raharu")));
     object.insert(std::make_pair("opp_name", picojson::value((std::string)boss->getName())));
     
     this->addRoom(object);
@@ -58,10 +58,38 @@ void RoomManager::createRoom(Boss *boss)
     
 }
 
+
+//ターン更新
+void RoomManager::saveRoomByEmbody(Room* room)
+{
+    //ルーム
+    picojson::object object;
+    object.clear();
+    
+    object.insert(std::make_pair("id", picojson::value((double)room->getId())));
+    object.insert(std::make_pair("condition", picojson::value((double)room->getCondition())));
+    object.insert(std::make_pair("boss_id", picojson::value((double)room->getBossId())));
+    object.insert(std::make_pair("stage_id", picojson::value((double)room->getStageId())));
+    object.insert(std::make_pair("turn", picojson::value((double)room->getTurn())));
+    object.insert(std::make_pair("my_name", picojson::value((std::string)room->getMyName())));
+    object.insert(std::make_pair("opp_name", picojson::value((std::string)room->getOppName())));
+    
+    this->saveRoom(object);
+}
+
+
+
 //ルーム追加
 void RoomManager::addRoom(picojson::object& object)
 {
     this->addPicoJsonObject(getTableName(), object);
+}
+
+
+//ルーム更新
+void RoomManager::saveRoom(picojson::object& object)
+{
+    this->savePicoJsonObject(getTableName(), object);
 }
 
 //現在バトル中のレコード取得
@@ -98,4 +126,35 @@ Room* RoomManager::getBattlingRoom()
 void RoomManager::addRoomDetail(picojson::object& object)
 {
     this->addPicoJsonObject(getTableDetail(), object);
+}
+
+//ルーム詳細取得
+RoomDetail* RoomManager::getRoomDetail(Room* room, int turn_id)
+{
+    std::string sql = "SELECT * FROM " + getTableDetail() + " WHERE `room_id` = ? AND turn = ?";
+    
+    const char *pzTest;
+    sqlite3_prepare_v2(_db, sql.c_str(), strlen(sql.c_str()), &_stmt, &pzTest);
+    
+    sqlite3_bind_int(_stmt, 1, room->getId());
+    sqlite3_bind_int(_stmt, 2, turn_id);
+    sqlite3_step(_stmt);
+    
+    auto embody = RoomDetail::getInstance();
+    
+    if(sqlite3_data_count(_stmt)){
+        embody->setId(sqlite3_column_int(_stmt, 0));
+        embody->setCondition(sqlite3_column_int(_stmt, 1));
+        embody->setTurn(sqlite3_column_int(_stmt, 2));
+        embody->setMyHp(sqlite3_column_int(_stmt, 3));
+        embody->setMyMagicId(sqlite3_column_int(_stmt, 4));
+        embody->setOppHp(sqlite3_column_int(_stmt, 5));
+        embody->setOppMagicId(sqlite3_column_int(_stmt, 6));
+    }
+    
+    sqlite3_reset(_stmt);
+    sqlite3_clear_bindings(_stmt);
+    sqlite3_finalize(_stmt);
+    
+    return embody;
 }

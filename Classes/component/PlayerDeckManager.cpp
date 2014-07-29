@@ -40,25 +40,25 @@ bool PlayerDeckManager::init()
     //初期化
     this->setDeck(CCArray::createWithCapacity(DECK_COUNT));
     this->setHandsCards(CCArray::createWithCapacity(HANDS_DECK));
-    this->setUsed_Cards(CCArray::createWithCapacity(USED_COUNT));
+    this->setUsedCards(CCArray::createWithCapacity(USED_COUNT));
     
     //各属性の枚数※後でUserDefaultから取るよ
     auto earth_count_max = 10;
     this->setDeckByCard(CARD_EARTH, earth_count_max);
     
-    auto liquid_count_max = 10;
+    auto liquid_count_max = 2;
     this->setDeckByCard(CARD_LIQUID, liquid_count_max);
     
-    auto fire_count_max = 10;
+    auto fire_count_max = 22;
     this->setDeckByCard(CARD_FIRE, fire_count_max);
     
-    auto thunder_count_max = 10;
+    auto thunder_count_max = 22;
     this->setDeckByCard(CARD_THUNDER, thunder_count_max);
 
-    auto dark_count_max = 10;
+    auto dark_count_max = 2;
     this->setDeckByCard(CARD_DARK, dark_count_max);
     
-    auto holy_count_max = 10;
+    auto holy_count_max = 2;
     this->setDeckByCard(CARD_HOLY, holy_count_max);
     
     return true;
@@ -97,4 +97,16 @@ void PlayerDeckManager::reload2HandsCards()
     CCLOG("hans_card_count:%zd", hans_cards->count());
     CCLOG("deck_count:%zd", deck->count());
     
+}
+
+//カードを使用済みにする
+void PlayerDeckManager::usedCard(PlayerCard* card)
+{
+    auto hans_cards = this->getHandsCards();
+    hans_cards->removeObject(card);
+    
+    //初期化
+    card->initParam();
+    auto use_cards = getUsedCards();
+    use_cards->addObject(card);
 }

@@ -147,6 +147,54 @@ void SqliteManager::addPicoJsonObject(const std::string &table_name, picojson::o
     
 }
 
+//更新
+void SqliteManager::savePicoJsonObject(const std::string &table_name, picojson::object &object)
+{
+    std::string values = "";
+    std::string update_id = "";
+    
+    picojson::object::iterator it = object.begin();
+    while (it != object.end()) {
+        values.append('\''+(*it).first+'\'');
+        values.append("=");
+        
+        
+        std::string value;
+        if(object[it->first].is<double>()){
+            auto val = cocos2d::Value(object[it->first].get<double>());
+            value = std::to_string(val.asInt());
+        }else if(object[it->first].is<std::string>()){
+            value = object[it->first].get<std::string>();
+        }
+        
+        if ((*it).first == "id") {
+            update_id = value;
+        }
+        
+        values.append('\''+value+'\'');
+        values.append(",");
+        it++;
+    }
+    std::string updated_at = "updated_at";
+    std::string now_time = "datetime('now', 'localtime')";
+    
+    //更新時間
+    values.append('\''+updated_at+'\'');
+    values.append("=");
+    values.append(now_time);
+    
+    std::string sql = "UPDATE "+ table_name +" SET " + values + " WHERE id = " + update_id;
+    CCLOG("sql:%s", sql.c_str());
+    
+    _result = this->executeQuery(sql);
+    if (_result != SQLITE_OK)
+    {
+        CCLOG("エラー%d：%s", _result, _error_msg);
+    }
+    
+}
+
+
 
 
 int SqliteManager::_isExist(void *para, int n_col, char ** col_value, char ** col_name)

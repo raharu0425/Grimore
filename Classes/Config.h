@@ -28,7 +28,7 @@
 #define CARD_HOLY 9331
 
 //バトル設定
-#define MAX_HP 500
+#define MAX_HP 200
 #define MAX_TURN 10
 
 //ZIndexはそのまま優先度となる

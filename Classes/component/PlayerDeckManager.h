@@ -12,6 +12,7 @@
 #include <iostream>
 #include "cocos2d.h"
 #include "../Config.h"
+#include "PlayerCard.h"
 
 class PlayerDeckManager : public cocos2d::Ref
 {
@@ -25,13 +26,16 @@ public:
     //各種カード達
     CC_SYNTHESIZE(cocos2d::__Array*, _player_deck, Deck);
     CC_SYNTHESIZE(cocos2d::__Array*, _hands_cards, HandsCards);
-    CC_SYNTHESIZE(cocos2d::__Array*, _used_cards, Used_Cards);
+    CC_SYNTHESIZE(cocos2d::__Array*, _used_cards, UsedCards);
     
     
     //デッキにセットする
     void setDeckByCard(int identifer, int count);
     //デッキのリロードを行う(足りないカードを追加する)
     void reload2HandsCards();
+    //カードを使用済みにする
+    void usedCard(PlayerCard* card);
+    
 };
 
 #endif /* defined(__Grimore__PlayerDeckManager__) */

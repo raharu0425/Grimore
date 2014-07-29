@@ -48,6 +48,9 @@ public:
     //picojsonデータを追加
     void addPicoJsonObject(const std::string &table_name, picojson::object &values);
     
+    //picojsonデータを更新
+    void savePicoJsonObject(const std::string &table_name, picojson::object &object);
+    
 };
 
 

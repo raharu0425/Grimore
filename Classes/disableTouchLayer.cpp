@@ -25,10 +25,12 @@ bool disableTouchLayer::init()
 
 bool disableTouchLayer::onTouchBegan(cocos2d::Touch* touch, cocos2d::Event* unused_event)
 {
+    /*
     push_count++;
     if(push_count >= 10){
         this->removeFromParentAndCleanup(true);
     }
+     */
     CCLOG("%d : %s(%d)", push_count, "disableTouch", __LINE__);
     return true;
 }

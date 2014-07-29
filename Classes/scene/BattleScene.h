@@ -46,6 +46,8 @@ public:
     cocos2d::Sprite *background;
     PlayerDeckManager* deck;
     cocos2d::__Array* hand_cards;
+    cocos2d::__Array* used_cards;
+    cocos2d::__Array* deck_cards;
     cocos2d::ui::Button* button;
     
     CC_SYNTHESIZE(bool, _is_selected_card, SeletedCard);
@@ -55,11 +57,12 @@ public:
     void update(float delta);
     void battleUpdate(float delta);
     
-    //ボタンイベント
-    virtual bool onTouchAttackButton(cocos2d::Ref* sender, cocos2d::ui::TouchEventType type);
-    
     //Debug
     void complted(float delta);
+    
+    void actionStartDone(Ref* sender);
+    
+    BattleProcessor* battleProcessor;
     
     //バトル結果
     BattleResult result;

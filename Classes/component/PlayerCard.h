@@ -30,6 +30,9 @@ public :
     virtual bool onTouchBegan(cocos2d::Touch* touch, cocos2d::Event* event);
     virtual void onTouchMoved(cocos2d::Touch* touch, cocos2d::Event* event);
     virtual void onTouchEnded(cocos2d::Touch* touch, cocos2d::Event* event);
+    
+    //カード情報を初期化
+    void initParam();
 };
 
 #endif /* defined(__Grimore__PlayerCard__) */

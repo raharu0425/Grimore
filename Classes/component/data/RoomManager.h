@@ -14,6 +14,7 @@
 #include "../SqliteManager.h"
 #include "../Room.h"
 #include "../Boss.h"
+#include "../BattleProcessor.h"
 
 class RoomManager : public SqliteManager
 {
@@ -35,9 +36,16 @@ public:
     void addRoom(picojson::object& object);
     //ルーム詳細追加
     void addRoomDetail(picojson::object& object);
+    //ルームEmbody更新する
+    void saveRoomByEmbody(Room* room);
+    //ルームを更新する
+    void saveRoom(picojson::object& object);
     
     //現在バトル中のレコードを取得
     Room* getBattlingRoom();
+    
+    //ルームから取得
+    RoomDetail* getRoomDetail(Room* room, int turn_id);
     
     
     

@@ -18,6 +18,14 @@ USING_NS_CC;
 #define IS_NONE 0
 #define IS_EXECUTE_BATTLE 1
 #define IS_CALCING 2
+#define IS_ACTION_START 4
+#define IS_MYUSECARD 8
+#define IS_MYATTACK 16
+#define IS_MYMAGIC_GAUGE_CHANGE 32
+#define IS_BATTLE_END 64
+#define IS_MYMOVECARD 128
+#define IS_OPPATTACK 256
+#define IS_OPPMAGIC_GAUGE_CHANGE 512
 
 //Delegateクラス
 class BattleSceneConditionDelegate
@@ -46,10 +54,48 @@ public:
     //状態判定
     bool isExecuteBattle(){ return this->getCondition() & IS_EXECUTE_BATTLE;}
     bool isCalcing(){ return this->getCondition() & IS_CALCING;}
+    bool isActionStart(){ return this->getCondition() & IS_ACTION_START; }
+    bool isMyUseCard(){ return this->getCondition() & IS_MYUSECARD; }
+    bool isMyAttack(){ return this->getCondition() & IS_MYATTACK; }
+    bool isMyMagicGaugeChange(){ return this->getCondition() & IS_MYMAGIC_GAUGE_CHANGE; }
+    bool isMyMoveCard(){ return this->getCondition() & IS_MYMOVECARD; }
+    bool isOppAttack(){ return this->getCondition() & IS_OPPATTACK; }
+    bool isOppMagicGaugeChange(){ return this->getCondition() & IS_OPPMAGIC_GAUGE_CHANGE; }
+    bool isBattleEnd(){ return this->getCondition() & IS_BATTLE_END; }
     
     //状態変化
     void onExecuteBattle();
     void onCalcing(){ this->addCondition(IS_CALCING);}
+    void onActionStart(){
+        this->setCondition(IS_EXECUTE_BATTLE);
+        this->addCondition(IS_ACTION_START);
+    }
+    void onMyUseCard(){
+        this->setCondition(IS_EXECUTE_BATTLE);
+        this->addCondition(IS_MYUSECARD);
+    }
+    void onMyAttack(){
+        this->setCondition(IS_EXECUTE_BATTLE);
+        this->addCondition(IS_MYATTACK);
+    }
+    void onMyMagicGaugeChange(){
+        this->setCondition(IS_EXECUTE_BATTLE);
+        this->addCondition(IS_MYMAGIC_GAUGE_CHANGE);
+    }
+    void onMyMoveCard(){
+        this->setCondition(IS_EXECUTE_BATTLE);
+        this->addCondition(IS_MYMOVECARD);
+    }
+    void onOppAttack(){
+        this->setCondition(IS_EXECUTE_BATTLE);
+        this->addCondition(IS_OPPATTACK);
+    }
+    void onOppMagicGaugeChange(){
+        this->setCondition(IS_EXECUTE_BATTLE);
+        this->addCondition(IS_OPPMAGIC_GAUGE_CHANGE);
+    }
+
+    void onBattleEnd(){ this->setCondition(IS_BATTLE_END); }
     
     //バトル実行
     void executeBattle();

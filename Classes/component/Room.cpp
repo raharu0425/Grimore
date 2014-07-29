@@ -8,6 +8,8 @@
 
 #include "Room.h"
 
+#include "../component/data/RoomManager.h"
+
 static Room *s_Shared = nullptr;
 
 Room::Room()
@@ -47,5 +49,12 @@ bool Room::init()
 bool Room::isBattling()
 {
     return getCondition() == kBattleCondition::Battling;
+}
+
+//ルーム詳細を取得
+RoomDetail* Room::getDetail()
+{
+    auto roomManager = RoomManager::getInstance();
+    return roomManager->getRoomDetail(this, getTurn());
 }
 

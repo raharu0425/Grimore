@@ -11,6 +11,7 @@
 
 #include <iostream>
 #include "cocos2d.h"
+#include "RoomDetail.h"
 
 USING_NS_CC;
 
@@ -42,28 +43,7 @@ public:
     
     //Methods
     bool isBattling();
-};
-
-//RoomDetail
-class RoomDetail: public Ref
-{
-private:
-    RoomDetail();
-    virtual ~RoomDetail();
-public:
-    //Method
-    static RoomDetail* getInstance();
-    bool init();
-    
-    // struct
-    CC_SYNTHESIZE(int, _detail_id, Id);
-    CC_SYNTHESIZE(int, _room_id, Condition);
-    CC_SYNTHESIZE(int, _turn, Tuen);
-    CC_SYNTHESIZE(int, _my_hp, MyHp);
-    CC_SYNTHESIZE(int, _my_magic_id, MyMagicId);
-    CC_SYNTHESIZE(int, _opp_hp, OppHp);
-    CC_SYNTHESIZE(int, _opp_magic_id, OppMagicId);
-    
+    RoomDetail* getDetail();
 };
 
 #endif /* defined(__Grimore__Room__) */

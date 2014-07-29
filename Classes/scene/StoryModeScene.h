@@ -22,8 +22,8 @@ public :
     virtual bool init();
     CREATE_FUNC(StoryModeScene);
 
+    //ページャーのコールバック（実際には使ってない）
     void pageviewCallBack(cocos2d::Ref * psender, cocos2d::ui::PageViewEventType type);
-    void touchEvent(cocos2d::Ref * pSender, cocos2d::ui::TouchEventType type);
 
 };
 
