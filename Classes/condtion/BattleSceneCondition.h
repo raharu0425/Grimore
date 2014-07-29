@@ -26,6 +26,7 @@ USING_NS_CC;
 #define IS_MYMOVECARD 128
 #define IS_OPPATTACK 256
 #define IS_OPPMAGIC_GAUGE_CHANGE 512
+#define IS_FINISH 1024
 
 //Delegateクラス
 class BattleSceneConditionDelegate
@@ -62,6 +63,7 @@ public:
     bool isOppAttack(){ return this->getCondition() & IS_OPPATTACK; }
     bool isOppMagicGaugeChange(){ return this->getCondition() & IS_OPPMAGIC_GAUGE_CHANGE; }
     bool isBattleEnd(){ return this->getCondition() & IS_BATTLE_END; }
+    bool isFinish(){ return this->getCondition() & IS_FINISH; }
     
     //状態変化
     void onExecuteBattle();
@@ -94,11 +96,9 @@ public:
         this->setCondition(IS_EXECUTE_BATTLE);
         this->addCondition(IS_OPPMAGIC_GAUGE_CHANGE);
     }
+    void onFinish(){ this->setCondition(IS_FINISH); }
 
     void onBattleEnd(){ this->setCondition(IS_BATTLE_END); }
-    
-    //バトル実行
-    void executeBattle();
     
 };
 

@@ -94,6 +94,9 @@ void BattleProcessor::execute()
         RoomManager::getInstance()->saveRoomByEmbody(room);
     }
     
+    setMyResult(my_result);
+    setOppResult(opp_result);
+    
     //結果を保存
     picojson::object object;
     object.clear();

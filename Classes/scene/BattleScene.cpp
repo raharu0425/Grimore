@@ -163,13 +163,6 @@ void BattleScene::update(float delta)
         button->setBright(true);
         setSeletedCard(is_select);
     }
-    
-    //ローディングバー
-    /*
-    auto loadingBar = dynamic_cast<LoadingBar*>(widget->getChildByName("HPGaugeLeft"));
-    auto pers = loadingBar->getPercent();
-    loadingBar->setPercent(pers - 1);
-     */
 }
 
 //バトルフレーム
@@ -197,10 +190,6 @@ void BattleScene::battleUpdate(float delta)
         battleProcessor->execute();
         
         condition->onActionStart();
-        
-        auto my_result = battleProcessor->getMyResult();
-        auto opp_result = battleProcessor->getOppResult();
-    
     }
     
     //スタート処理
@@ -254,8 +243,6 @@ void BattleScene::battleUpdate(float delta)
                 delete_card->runAction(Sequence::create(spawn,remove,removeArray,nextCahin, NULL));
             }
         }
-        
-        //CCLOG("count:%zd", hand_cards->count());
     }
     
     //カードの場所変更
@@ -299,11 +286,6 @@ void BattleScene::battleUpdate(float delta)
                 move_card->runAction(Sequence::create(delay, feed_in, nextCahin, NULL));
                 
             }
-            
-                
-            //CCLOG("種類:%d", move_card->getIndex());
-            //CCLOG("タグ:%d", move_card->getIndex());
-            
         }
     }
     
@@ -400,17 +382,23 @@ void BattleScene::battleUpdate(float delta)
         condition->delCondition(IS_EXECUTE_BATTLE);
         CCLOG("終了処理");
         
-        //ルーム取得
-        auto room = RoomManager::getInstance()->getBattlingRoom();
-        auto turn_count = (ImageView*)widget->getChildByName("TurnCount");
-        auto turn_label = (TextAtlas*)turn_count->getChildByName("TurnCountLabel");
-        turn_label->setString(std::to_string(room->getTurn()));
-        
         //透過度変える
         auto background = dynamic_cast<ImageView*>(widget->getChildByName("BackGround"));
         background->runAction(FadeTo::create(1.0f, 255));
         auto disabelLayer = (disableTouchLayer*) getChildByTag(1);
         disabelLayer->removeFromParentAndCleanup(true);
+        
+        auto result = battleProcessor->getMyResult();
+        
+        if (result.is_finish) {
+            scheduleOnce(schedule_selector(BattleScene::complted), 2.0f);
+        }else{
+            //ルーム取得
+            auto room = RoomManager::getInstance()->getBattlingRoom();
+            auto turn_count = (ImageView*)widget->getChildByName("TurnCount");
+            auto turn_label = (TextAtlas*)turn_count->getChildByName("TurnCountLabel");
+            turn_label->setString(std::to_string(room->getTurn()));
+        }
     }
 
 }
@@ -418,5 +406,5 @@ void BattleScene::battleUpdate(float delta)
 //シーンの切り替え
 void BattleScene::complted(float delta)
 {
-    //Director::getInstance()->replaceScene(TransitionFade::create(2.0f, StoryModeScene::createScene()));
+    Director::getInstance()->replaceScene(TransitionFade::create(2.0f, StoryModeScene::createScene()));
 }
